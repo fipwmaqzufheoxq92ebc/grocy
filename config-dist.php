@@ -66,6 +66,16 @@ Setting('ENTRY_PAGE', 'stock');
 # places where user context is needed will then use the default (first existing) user
 Setting('DISABLE_AUTH', false);
 
+# The Authentication-Providers. (string or array of strings)
+# Currently available:
+#   - API_KEY 'password-only' authentication, useful for the API.
+#   - SESSION Cookie-based session authentication, used by browsers.
+#   - PROXY Uses a username supplied by the reverse proxy.
+Setting('AUTH_PROVIDER', ['API_KEY', 'SESSION']);
+
+# The Header-name with the username set by the reverse-proxy (case-insensitive)
+Setting('PROXY_AUTH_HEADER', 'X-Username');
+
 # Set this to true if you want to disable the ability to scan a barcode via the device camera (Browser API)
 Setting('DISABLE_BROWSER_BARCODE_CAMERA_SCANNING', false);
 

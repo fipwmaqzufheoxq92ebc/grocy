@@ -17,7 +17,8 @@
 			"Grocy\\Services\\": "services/",
 			"Grocy\\Controllers\\": "controllers/",
 			"Grocy\\Middleware\\": "middleware/",
-			"Grocy\\Helpers\\": "helpers/"
+			"Grocy\\Helpers\\": "helpers/",
+			"Grocy\\Auth\\": "auth/"
 		},
 		"files": [
 			"helpers/extensions.php"
