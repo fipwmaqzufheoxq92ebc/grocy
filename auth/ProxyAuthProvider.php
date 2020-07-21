@@ -36,6 +36,7 @@ class ProxyAuthProvider extends AuthProvider
                 ''
             );
         }
+        define('GROCY_SHOW_USERVIEWS', false);
         return $user;
     }
 }

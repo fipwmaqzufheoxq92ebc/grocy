@@ -39,6 +39,7 @@ class AuthMiddleware extends BaseMiddleware
             define('GROCY_AUTHENTICATED', true);
             return $handler->handle($request);
         } else {
+            define('GROCY_SHOW_USERVIEWS', true);
             $user = $this->authenticate($request);
             if ($user === null) {
                 define('GROCY_AUTHENTICATED', false);
@@ -48,6 +49,7 @@ class AuthMiddleware extends BaseMiddleware
                 define('GROCY_AUTHENTICATED', true);
                 define('GROCY_USER_ID', $user->id);
                 define('GROCY_USER_USERNAME', $user->username);
+
 
                 return $response = $handler->handle($request);
             }
